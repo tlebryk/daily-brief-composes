@@ -1,0 +1,26 @@
+version: '3'
+
+# networks:
+#     my-net:
+#         driver: bridge
+
+services:  
+            
+    app2:
+        # build:
+        image: tlebryk/daily-clipping
+            # context: cybernews
+            # dockerfile: cybernews/Dockerfile
+        ports:
+            - "5000:5000"
+        # networks:
+        #     -  my-net
+    trans:
+        # build:
+        image: zotero/translation-server
+            # context: translation-server
+            # dockerfile: translation-server/Dockerfile
+        ports:
+            - "1969:1969"
+        # networks:
+        #     -  my-net

@@ -1,0 +1,12 @@
+# stable release zotero 2.04 and clipping 1.0
+version 3  
+
+services:    
+    app2:
+        image: tlebryk/daily-clipping:1.0
+        ports:
+            - "5000:5000"
+    trans:
+        image: zotero/translation-server:2.0.4
+        ports:
+            - "1969:1969"
